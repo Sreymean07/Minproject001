@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title layout:title-pattern="$CONTENT_TITLE - $DECORATOR_TITLE"> Spring </title>
+
+    <style th:replace="@{/shared/_style}"></style>
+    <link href="/mystyle.css" rel="stylesheet" type=text/css />
+
+    
+
+</head>
+<body class="">
+
+    <div th:replace="@{/shared/_header}"></div>
+    
+    <div class="mainwrapper">
+
+    <div th:replace="@{/shared/_left-side-bar}"></div>
+
+    <div layout:fragment="content"></div>
+
+ </div>
+
+    <div th:replace="@{/shared/_script}"></div>
+
+</body>
+</html>
